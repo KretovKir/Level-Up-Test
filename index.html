@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel = "stylesheet" href = "styles.css">
+    <title> Level Up </title>
+    <script defer src ="script.js"></script>
+  </head>
+  <body>
+    <div class="root">
+      <div class = "promo">
+        <video autoplay muted loop id="myVideo">
+          <source src="img/blast.mp4" type="video/mp4">
+        </video>
+        <div class = "level_up">
+          <h2 class = "level_up-item"> Level Up </h2>
+        </div>
+
+
+        <div class = "promo-two_blocks"> 
+          <div class = "promo_left-block">
+            <img src = "img/prod.png" class = "promo-img" alt = "promo image">
+          </div>
+
+          <div class = "promo_right-block">
+            <div class = "promo-list">
+              <ul class = "list">
+                <li class = "promo-list_item">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li class = "promo-list_item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi eveniet quibusdam odit beatae nesciunt, fuga sed fugiat sunt corporis.</li>
+                <li class = "promo-list_item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus quos ipsum modi quis quas placeat officia, harum excepturi voluptas.</li>
+              </ul>
+            </div>
+
+            <div class = "promo-button_block">
+              <button class = "order-button"> Заказать </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    <div class = "compound">
+      <div class = "compound_left">
+        <div class = "compound_left_item">
+          <div class = "atoma_double_block">
+            <img src = "img/atoma.png" class = "atoma" alt = "atoma">
+            <p class = "atoma_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam vitae consectetur nihil quaerat velit repellendus exercitationem.</p>
+          </div>
+
+          <div class = "atoma_double_block">
+            <img src = "img/atoma.png" class = "atoma" alt = "atoma">
+            <p class = "atoma_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, unde sint. Molestias, deleniti, ea reiciendis voluptatum magnam officiis itaque.</p>
+          </div>
+
+          <div class = "atoma_double_block">
+            <img src = "img/atoma.png" class = "atoma" alt = "atoma">
+            <p class = "atoma_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat rem deleniti quod aperiam, commodi libero nemo cum veniam nostrum architecto facilis iusto.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class = "compound_middle">
+        <img src = "img/prod.png" class = "compound_img_prod" alt = "prod">
+      </div>
+
+      <div class = "compound_right">
+        <div class = "compound_right_item">
+          <div class = "atoma_double_block">
+            <img src = "img/atoma.png" class = "atoma" alt = "atoma">
+            <p class = "atoma_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam vitae consectetur nihil quaerat velit repellendus exercitationem.</p>
+          </div>
+
+          <div class = "atoma_double_block">
+            <img src = "img/atoma.png" class = "atoma" alt = "atoma">
+            <p class = "atoma_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, unde sint. Molestias, deleniti, ea reiciendis voluptatum magnam officiis itaque.</p>
+          </div>
+
+          <div class = "atoma_double_block">
+            <img src = "img/atoma.png" class = "atoma" alt = "atoma">
+            <p class = "atoma_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat rem deleniti quod aperiam, commodi libero nemo cum veniam nostrum architecto facilis iusto.</p>
+          </div>
+        </div>
+
+        <button class = "compound_order-button">Заказать</button>
+      </div>
+    </div>
+
+    <div id="carousel" class="carousel">
+      <button class="arrow prev"> < </button>
+      <div class="gallery">
+        <ul class = "gallery_list">
+          <li class = "gallery_item"> <div class = "user_desc2"><img src="img/blank-user.png" class = "empty_user1 user1"> <p class = "carousel_desc1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor fuga sed iste illum iure. </p></div></li>
+
+          <li class = "gallery_item"> <div class = "user_desc2"><img src="img/blank-user.png" class = "empty_user2 user2"> <p class = "carousel_desc2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor fuga sed iste illum iure. <br> Nesciunt vero asperiores iste odio quidem placeat! Nobis dolore adipisci</p></div></li>
+
+          <li class = "gallery_item"> <div class = "user_desc3"><img src="img/blank-user.png" class = "empty_user3 user3"> <p class = "carousel_desc3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor fuga sed iste illum iure. Nesciunt vero asperiores iste odio quidem placeat! </p></div></li>
+        </ul>
+      </div>
+      <button class="arrow next"> > </button>
+    </div>
+
+    <script>
+      
+      /* конфигурация */
+      let width = 800; 
+      let count = 1; 
+  
+      let list = carousel.querySelector('ul');
+      let listElems = carousel.querySelectorAll('li');
+  
+      let position = 0; // положение ленты прокрутки
+  
+      carousel.querySelector('.prev').onclick = function() {
+        // сдвиг влево
+        position += width * count;
+        // последнее передвижение влево 
+        position = Math.min(position, 0)
+        list.style.marginLeft = position + 'px';
+      };
+  
+      carousel.querySelector('.next').onclick = function() {
+        // сдвиг вправо
+        position -= width * count;
+        // последнее передвижение вправо 
+        position = Math.max(position, -width * (listElems.length - count));
+        list.style.marginLeft = position + 'px';
+      };
+
+    </script>
+  
+    
+    <div class="promo2">
+      <div class = "up_block">
+        <div class = "promo2_left">
+          <img class = "doc" src = "img/doctor.png" alt = "doctor">
+        </div>
+
+        <div class = "promo2_right">
+          <p class = "promo2_description">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Sunt sed aperiam ducimus voluptatibus ipsa! Repudiandae sunt quod, necessitatibus <br> vitae ipsam voluptas suscipit, optio ut voluptates deserunt dignissimos magnam velit amet! Lorem ipsum dolor sit amet<br> consectetur, adipisicing elit. Fuga odio repellat perferendis qui vel sunt obcaecati adipisci corrupti vitae pariatur assumenda,<br> tempora ut nemo at, et, quo corporis debitis alias?</p>
+          <button class = "promo2_order-button"> Заказать </button>
+        </div>
+      </div>
+
+      <div class="promo2_down">
+        <ul class = "promo2_list">
+          <li class = "promo2_list-item">Lorem, ipsum dolor sit amet.</li>
+          <li class = "promo2_list-item">Us quis eum asperiores nihil ducimus</li>
+          <li class = "promo2_list-item">Iusto, adipisci natus.</li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <div id = "order" class = "zajavka_block">
+      <div class = "zaj_headtxt-block">
+        <h2 class = "zaj_headtxt">Level Up</h2>
+      </div>
+      <div class = "counter">
+        <p class= "count">30.00</p> 
+      </div>
+
+      
+
+      <div class = "prod_forms">
+
+        <div class = "prod-left">
+          <div class = "prod_prices">
+            <img class = "production" src = "img/prod.png">
+            <div class = "prices">
+              <div class = "old-price_block">
+                <p class = "old-price_item">49.99$</p>
+              </div>
+              <div class = "new-price_block">
+                <p class = "new-price_item">29.99$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="prod-right">
+          <div class ="forms_button">
+            <form class ="only_form">  
+              <input class = "name_input prod_input" type = "text" placeholder="Как Вас зовут?">
+            </form>
+            <form class = "forms_button">
+              <input class = "tel_input prod_input" type = "tel" placeholder="Ваш телефон">
+            </form>
+            <button class = "down_button order-button">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </body>
+</html>
